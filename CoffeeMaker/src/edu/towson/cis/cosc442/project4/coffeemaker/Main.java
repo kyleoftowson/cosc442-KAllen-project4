@@ -11,8 +11,8 @@ import java.util.Scanner;
  * @version $Revision: 1.0 $
  */
 public class Main {
-    private static CoffeeMaker coffeeMaker;
-
+    protected static CoffeeMaker coffeeMaker;
+    protected static Scanner scan;
     public static void mainMenu() {
         System.out.println("1. Add a recipe");
         System.out.println("2. Delete a recipe");
@@ -24,7 +24,7 @@ public class Main {
         System.out.println();
         
         //Get user input
-        final int userInput = stringToInt(inputOutput("Please press the number that corresponds to what you would like the coffee maker to do."));
+       int userInput = stringToInt(inputOutput("Please press the number that corresponds to what you would like the coffee maker to do."));
         
         if(userInput == 1) addRecipe();
         if(userInput == 2) deleteRecipe();
@@ -117,7 +117,7 @@ public class Main {
     }
     
     public static void editRecipe() {
-        final Recipe [] recipes = coffeeMaker.getRecipes();
+         Recipe [] recipes = coffeeMaker.getRecipes();
         for(int i = 0; i < recipes.length; i++) {
             System.out.println((i+1) + ". " + recipes[i].getName());
         }
@@ -270,9 +270,18 @@ public class Main {
 	    
 	
 	 try {
-	        returnString = br.readLine();
-	    }
-	    catch (IOException e){
+		 if(scan.equals(null)){
+	        returnString = br.readLine();}
+		 else{
+	returnString=scan.next();
+	returnString.trim();
+	if(returnString.equals("")){
+		returnString=scan.nextLine();
+	}
+	    
+		 }
+	 }
+	    catch (/*IO*/Exception e){
 	     
 	    
 	    	
@@ -280,6 +289,7 @@ public class Main {
 	    System.out.println("Error reading in value");
 	        mainMenu();
 	    }
+	 System.out.println(returnString);
 	    return returnString;
     }
     
@@ -295,6 +305,7 @@ public class Main {
         }
         catch (NumberFormatException e) {
             System.out.println("Please input an integer");
+            System.out.println(value);
             System.out.println();
         }
         return returnInt;
@@ -306,6 +317,7 @@ public class Main {
      */
     public static void main(String[] args) {
 	    coffeeMaker = new CoffeeMaker();
+	    scan=new Scanner(System.in);
 	    System.out.println("Welcome to the CoffeeMaker!");
 	    System.out.println();
 	    mainMenu();

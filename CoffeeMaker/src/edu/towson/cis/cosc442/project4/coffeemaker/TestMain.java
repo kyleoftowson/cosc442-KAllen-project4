@@ -115,12 +115,33 @@ public class TestMain {
 		
 		Main.scan=new Scanner(s);
 		
-		int coffee=Main.coffeeMaker.checkInventory().getCoffee();
+		int milk=Main.coffeeMaker.checkInventory().getMilk();
 		Main.mainMenu();
-		System.out.println(Main.coffeeMaker.checkInventory().getChocolate()+"!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!");
 		
-		assertFalse(Main.coffeeMaker.checkInventory().getCoffee()==coffee);
+		assertFalse(Main.coffeeMaker.checkInventory().getMilk()==milk);
 
+	}
+	@Test
+	public void purchaseBeverage2() {
+		addRecipe1();
+		String s="";
+		s+="6 ";
+		s+="4 "+
+		"9 ";
+	
+		
+		s+= "------";
+		
+		
+		 
+		 
+		
+		Main.scan=new Scanner(s);
+		
+		int milk=Main.coffeeMaker.checkInventory().getMilk();
+		Main.mainMenu();
+		
+		assertTrue(Main.coffeeMaker.checkInventory().getMilk()==milk);
 	}
 
 	@Test
@@ -142,7 +163,7 @@ public class TestMain {
 		
 		Main.scan=new Scanner(s);
 		Main.mainMenu();
-		assertTrue(Main.coffeeMaker.checkInventory().getCoffee()==18);
+		assertTrue(Main.coffeeMaker.checkInventory().getChocolate()==22);
 	}
 
 	@Test

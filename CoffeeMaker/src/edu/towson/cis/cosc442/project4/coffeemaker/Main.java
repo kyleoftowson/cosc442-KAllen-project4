@@ -289,7 +289,7 @@ public class Main {
 	    System.out.println("Error reading in value");
 	        mainMenu();
 	    }
-	 System.out.println(returnString);
+	 
 	    return returnString;
     }
     
@@ -305,7 +305,7 @@ public class Main {
         }
         catch (NumberFormatException e) {
             System.out.println("Please input an integer");
-            System.out.println(value);
+            
             System.out.println();
         }
         return returnInt;

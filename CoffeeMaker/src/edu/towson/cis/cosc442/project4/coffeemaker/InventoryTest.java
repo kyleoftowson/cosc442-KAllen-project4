@@ -70,6 +70,78 @@ public class InventoryTest {
 		// add additional test code here
 		assertEquals(true, result);
 	}
+	@Test
+	public void testEnoughIngredients_3()
+		throws Exception {
+		Inventory i = InventoryFactory.createInventory();
+		Recipe r = RecipeFactory.createRecipe();
+		r.setAmtSugar(1);
+		r.setAmtMilk(1);
+		r.setAmtChocolate(1);
+		r.setAmtCoffee(1);
+		i.setChocolate(1);
+		i.setCoffee(1);
+		i.setMilk(1);
+		i.setSugar(0);
+		boolean result = i.enoughIngredients(r);
+
+		// add additional test code here
+		assertEquals(false, result);
+	}
+	@Test
+	public void testEnoughIngredients_9()
+		throws Exception {
+		Inventory i = InventoryFactory.createInventory();
+		Recipe r = RecipeFactory.createRecipe();
+		r.setAmtSugar(1);
+		r.setAmtMilk(1);
+		r.setAmtChocolate(1);
+		r.setAmtCoffee(1);
+		i.setChocolate(1);
+		i.setCoffee(1);
+		i.setMilk(0);
+		i.setSugar(1);
+		boolean result = i.enoughIngredients(r);
+
+		// add additional test code here
+		assertEquals(false, result);
+	}
+	@Test
+	public void testEnoughIngredients_7()
+		throws Exception {
+		Inventory i = InventoryFactory.createInventory();
+		Recipe r = RecipeFactory.createRecipe();
+		r.setAmtSugar(1);
+		r.setAmtMilk(1);
+		r.setAmtChocolate(1);
+		r.setAmtCoffee(1);
+		i.setChocolate(1);
+		i.setCoffee(0);
+		i.setMilk(1);
+		i.setSugar(1);
+		boolean result = i.enoughIngredients(r);
+
+		// add additional test code here
+		assertEquals(false, result);
+	}
+	@Test
+	public void testEnoughIngredients_6()
+		throws Exception {
+		Inventory i = InventoryFactory.createInventory();
+		Recipe r = RecipeFactory.createRecipe();
+		r.setAmtSugar(1);
+		r.setAmtMilk(1);
+		r.setAmtChocolate(1);
+		r.setAmtCoffee(1);
+		i.setChocolate(0);
+		i.setCoffee(1);
+		i.setMilk(1);
+		i.setSugar(1);
+		boolean result = i.enoughIngredients(r);
+
+		// add additional test code here
+		assertEquals(false, result);
+	}
 
 	/**
 	 * Run the int getChocolate() method test.
@@ -158,7 +230,7 @@ public class InventoryTest {
 
 		fixture.setChocolate(chocolate);
 
-		// add additional test code here
+		assertTrue(fixture.getChocolate()==0);
 	}
 
 	/**
@@ -175,8 +247,7 @@ public class InventoryTest {
 		int chocolate = 1;
 
 		fixture.setChocolate(chocolate);
-
-		// add additional test code here
+		assertTrue(fixture.getChocolate()==1);
 	}
 
 	/**
@@ -194,7 +265,7 @@ public class InventoryTest {
 
 		fixture.setCoffee(coffee);
 
-		// add additional test code here
+		assertTrue(fixture.getCoffee()==0);
 	}
 
 	/**
@@ -212,7 +283,7 @@ public class InventoryTest {
 
 		fixture.setCoffee(coffee);
 
-		// add additional test code here
+		assertTrue(fixture.getCoffee()==1);
 	}
 
 	/**
@@ -230,7 +301,7 @@ public class InventoryTest {
 
 		fixture.setMilk(milk);
 
-		// add additional test code here
+		assertTrue(fixture.getMilk()==0);
 	}
 
 	/**
@@ -247,8 +318,8 @@ public class InventoryTest {
 		int milk = 1;
 
 		fixture.setMilk(milk);
-
-		// add additional test code here
+		assertTrue(fixture.getMilk()==1);
+		
 	}
 
 	/**
@@ -266,7 +337,7 @@ public class InventoryTest {
 
 		fixture.setSugar(sugar);
 
-		// add additional test code here
+		assertTrue(fixture.getSugar()==0);
 	}
 
 	/**
@@ -284,7 +355,7 @@ public class InventoryTest {
 
 		fixture.setSugar(sugar);
 
-		// add additional test code here
+		assertTrue(fixture.getSugar()==1);
 	}
 
 	/**

@@ -91,6 +91,15 @@ r.setName("food1");
 		
 		assertEquals(false, result);
 	}
+	@Test
+	public void testEquals_6(){
+		Recipe r3=new Recipe();
+		Recipe r4=new Recipe();
+		r4.setName("Bob");
+		assertFalse(r3.equals(r4));
+		
+	}
+	
 
 	/**
 	 * Run the int getAmtChocolate() method test.
@@ -393,7 +402,7 @@ r.setName("food1");
 	@Test
 	public void testSetPrice_1()
 		throws Exception {
-		Recipe fixture = RecipeFactory.createRecipe();
+		Recipe fixture = new Recipe();
 		int price = -1;
 
 		fixture.setPrice(price);
@@ -411,12 +420,21 @@ r.setName("food1");
 	@Test
 	public void testSetPrice_2()
 		throws Exception {
-		Recipe fixture = RecipeFactory.createRecipe();
+		Recipe fixture = new Recipe();
 		int price = 1;
 
 		fixture.setPrice(price);
 
 		assertTrue(fixture.getPrice()==1);
+	}
+	@Test
+	public void testSetPrice_3() {
+		Recipe fixture = new Recipe();
+		int price = 0;
+
+		fixture.setPrice(price);
+
+		assertTrue(fixture.getPrice()==0);
 	}
 
 	/**

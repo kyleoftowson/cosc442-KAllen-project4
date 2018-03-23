@@ -2,12 +2,13 @@ package edu.towson.cis.cosc442.project4.coffeemaker;
 
 
 
+// TODO: Auto-generated Javadoc
 /**
  * The class <code>RecipeFactory</code> implements static methods that return instances of the class <code>{@link Recipe}</code>.
  *
- * @generatedBy CodePro at 3/19/18 9:13 PM
  * @author Kyle
  * @version $Revision: 1.0 $
+ * @generatedBy CodePro at 3/19/18 9:13 PM
  */
 public class RecipeFactory
  {
@@ -23,6 +24,7 @@ public class RecipeFactory
 	/**
 	 * Create an instance of the class <code>{@link Recipe}</code>.
 	 *
+	 * @return the recipe
 	 * @generatedBy CodePro at 3/19/18 9:13 PM
 	 */
 	public static Recipe createRecipe() {

@@ -3,19 +3,20 @@ package edu.towson.cis.cosc442.project4.coffeemaker;
 import org.junit.*;
 import static org.junit.Assert.*;
 
+// TODO: Auto-generated Javadoc
 /**
  * The class <code>RecipeTest</code> contains tests for the class <code>{@link Recipe}</code>.
  *
- * @generatedBy CodePro at 3/19/18 9:15 PM
  * @author Kyle
  * @version $Revision: 1.0 $
+ * @generatedBy CodePro at 3/19/18 9:15 PM
  */
 public class RecipeTest {
+	
 	/**
 	 * Run the boolean equals(Recipe) method test.
 	 *
-	 * @throws Exception
-	 *
+	 * @throws Exception the exception
 	 * @generatedBy CodePro at 3/19/18 9:15 PM
 	 */
 	@Test
@@ -26,15 +27,14 @@ public class RecipeTest {
 
 		boolean result = fixture.equals(r);
 
-		// add additional test code here
+		
 		assertEquals(false, result);
 	}
 
 	/**
 	 * Run the boolean equals(Recipe) method test.
 	 *
-	 * @throws Exception
-	 *
+	 * @throws Exception the exception
 	 * @generatedBy CodePro at 3/19/18 9:15 PM
 	 */
 	@Test
@@ -45,15 +45,14 @@ public class RecipeTest {
 
 		boolean result = fixture.equals(r);
 
-		// add additional test code here
+		
 		assertEquals(false, result);
 	}
 
 	/**
 	 * Run the boolean equals(Recipe) method test.
 	 *
-	 * @throws Exception
-	 *
+	 * @throws Exception the exception
 	 * @generatedBy CodePro at 3/19/18 9:15 PM
 	 */
 	@Test
@@ -67,6 +66,12 @@ public class RecipeTest {
 		
 		assertEquals(false, result);
 	}
+	
+	/**
+	 * Test equals 4.
+	 *
+	 * @throws Exception the exception
+	 */
 	@Test
 	public void testEquals_4()
 		throws Exception {
@@ -79,18 +84,28 @@ public class RecipeTest {
 		
 		assertEquals(false, result);
 	}
+	
+	/**
+	 * Test equals 5.
+	 *
+	 * @throws Exception the exception
+	 */
 	@Test
 	public void testEquals_5()
 		throws Exception {
 		Recipe fixture = RecipeFactory.createRecipe();
 		fixture.setName("food");
 		Recipe r = RecipeFactory.createRecipe();
-r.setName("food1");
+		r.setName("food1");
 		boolean result = fixture.equals(r);
 
 		
 		assertEquals(false, result);
 	}
+	
+	/**
+	 * Test equals 6.
+	 */
 	@Test
 	public void testEquals_6(){
 		Recipe r3=new Recipe();
@@ -104,8 +119,7 @@ r.setName("food1");
 	/**
 	 * Run the int getAmtChocolate() method test.
 	 *
-	 * @throws Exception
-	 *
+	 * @throws Exception the exception
 	 * @generatedBy CodePro at 3/19/18 9:15 PM
 	 */
 	@Test
@@ -123,8 +137,7 @@ r.setName("food1");
 	/**
 	 * Run the int getAmtCoffee() method test.
 	 *
-	 * @throws Exception
-	 *
+	 * @throws Exception the exception
 	 * @generatedBy CodePro at 3/19/18 9:15 PM
 	 */
 	@Test
@@ -134,15 +147,14 @@ r.setName("food1");
 
 		int result = fixture.getAmtCoffee();
 
-		// add additional test code here
+		
 		assertEquals(0, result);
 	}
 
 	/**
 	 * Run the int getAmtMilk() method test.
 	 *
-	 * @throws Exception
-	 *
+	 * @throws Exception the exception
 	 * @generatedBy CodePro at 3/19/18 9:15 PM
 	 */
 	@Test
@@ -152,15 +164,14 @@ r.setName("food1");
 
 		int result = fixture.getAmtMilk();
 
-		// add additional test code here
+		
 		assertEquals(0, result);
 	}
 
 	/**
 	 * Run the int getAmtSugar() method test.
 	 *
-	 * @throws Exception
-	 *
+	 * @throws Exception the exception
 	 * @generatedBy CodePro at 3/19/18 9:15 PM
 	 */
 	@Test
@@ -170,15 +181,14 @@ r.setName("food1");
 
 		int result = fixture.getAmtSugar();
 
-		// add additional test code here
+		
 		assertEquals(0, result);
 	}
 
 	/**
 	 * Run the String getName() method test.
 	 *
-	 * @throws Exception
-	 *
+	 * @throws Exception the exception
 	 * @generatedBy CodePro at 3/19/18 9:15 PM
 	 */
 	@Test
@@ -188,15 +198,14 @@ r.setName("food1");
 
 		String result = fixture.getName();
 
-		// add additional test code here
+		
 		assertEquals(null, result);
 	}
 
 	/**
 	 * Run the int getPrice() method test.
 	 *
-	 * @throws Exception
-	 *
+	 * @throws Exception the exception
 	 * @generatedBy CodePro at 3/19/18 9:15 PM
 	 */
 	@Test
@@ -206,15 +215,14 @@ r.setName("food1");
 
 		int result = fixture.getPrice();
 
-		// add additional test code here
+		
 		assertEquals(0, result);
 	}
 
 	/**
 	 * Run the void setAmtChocolate(int) method test.
 	 *
-	 * @throws Exception
-	 *
+	 * @throws Exception the exception
 	 * @generatedBy CodePro at 3/19/18 9:15 PM
 	 */
 	@Test
@@ -231,8 +239,7 @@ r.setName("food1");
 	/**
 	 * Run the void setAmtChocolate(int) method test.
 	 *
-	 * @throws Exception
-	 *
+	 * @throws Exception the exception
 	 * @generatedBy CodePro at 3/19/18 9:15 PM
 	 */
 	@Test
@@ -245,6 +252,12 @@ r.setName("food1");
 		assertTrue(fixture.getAmtChocolate()==1);
 		
 	}
+	
+	/**
+	 * Test set amt chocolate 3.
+	 *
+	 * @throws Exception the exception
+	 */
 	@Test
 	public void testSetAmtChocolate_3()
 		throws Exception {
@@ -259,8 +272,7 @@ r.setName("food1");
 	/**
 	 * Run the void setAmtCoffee(int) method test.
 	 *
-	 * @throws Exception
-	 *
+	 * @throws Exception the exception
 	 * @generatedBy CodePro at 3/19/18 9:15 PM
 	 */
 	@Test
@@ -273,6 +285,12 @@ r.setName("food1");
 
 		assertTrue(fixture.getAmtCoffee()==0);
 	}
+	
+	/**
+	 * Test set amt coffee 3.
+	 *
+	 * @throws Exception the exception
+	 */
 	@Test
 	public void testSetAmtCoffee_3()
 		throws Exception {
@@ -287,8 +305,7 @@ r.setName("food1");
 	/**
 	 * Run the void setAmtCoffee(int) method test.
 	 *
-	 * @throws Exception
-	 *
+	 * @throws Exception the exception
 	 * @generatedBy CodePro at 3/19/18 9:15 PM
 	 */
 	@Test
@@ -305,8 +322,7 @@ r.setName("food1");
 	/**
 	 * Run the void setAmtMilk(int) method test.
 	 *
-	 * @throws Exception
-	 *
+	 * @throws Exception the exception
 	 * @generatedBy CodePro at 3/19/18 9:15 PM
 	 */
 	@Test
@@ -323,8 +339,7 @@ r.setName("food1");
 	/**
 	 * Run the void setAmtMilk(int) method test.
 	 *
-	 * @throws Exception
-	 *
+	 * @throws Exception the exception
 	 * @generatedBy CodePro at 3/19/18 9:15 PM
 	 */
 	@Test
@@ -341,8 +356,7 @@ r.setName("food1");
 	/**
 	 * Run the void setAmtSugar(int) method test.
 	 *
-	 * @throws Exception
-	 *
+	 * @throws Exception the exception
 	 * @generatedBy CodePro at 3/19/18 9:15 PM
 	 */
 	@Test
@@ -359,8 +373,7 @@ r.setName("food1");
 	/**
 	 * Run the void setAmtSugar(int) method test.
 	 *
-	 * @throws Exception
-	 *
+	 * @throws Exception the exception
 	 * @generatedBy CodePro at 3/19/18 9:15 PM
 	 */
 	@Test
@@ -377,8 +390,7 @@ r.setName("food1");
 	/**
 	 * Run the void setName(String) method test.
 	 *
-	 * @throws Exception
-	 *
+	 * @throws Exception the exception
 	 * @generatedBy CodePro at 3/19/18 9:15 PM
 	 */
 	@Test
@@ -389,14 +401,13 @@ r.setName("food1");
 
 		fixture.setName(name);
 
-		// add additional test code here
+	
 	}
 
 	/**
 	 * Run the void setPrice(int) method test.
 	 *
-	 * @throws Exception
-	 *
+	 * @throws Exception the exception
 	 * @generatedBy CodePro at 3/19/18 9:15 PM
 	 */
 	@Test
@@ -413,8 +424,7 @@ r.setName("food1");
 	/**
 	 * Run the void setPrice(int) method test.
 	 *
-	 * @throws Exception
-	 *
+	 * @throws Exception the exception
 	 * @generatedBy CodePro at 3/19/18 9:15 PM
 	 */
 	@Test
@@ -427,6 +437,10 @@ r.setName("food1");
 
 		assertTrue(fixture.getPrice()==1);
 	}
+	
+	/**
+	 * Test set price 3.
+	 */
 	@Test
 	public void testSetPrice_3() {
 		Recipe fixture = new Recipe();
@@ -440,8 +454,7 @@ r.setName("food1");
 	/**
 	 * Run the String toString() method test.
 	 *
-	 * @throws Exception
-	 *
+	 * @throws Exception the exception
 	 * @generatedBy CodePro at 3/19/18 9:15 PM
 	 */
 	@Test
@@ -451,7 +464,7 @@ r.setName("food1");
 
 		String result = fixture.toString();
 
-		// add additional test code here
+		
 		assertEquals(null, result);
 	}
 
@@ -466,7 +479,7 @@ r.setName("food1");
 	@Before
 	public void setUp()
 		throws Exception {
-		// add additional set up code here
+		
 	}
 
 	/**
@@ -480,7 +493,7 @@ r.setName("food1");
 	@After
 	public void tearDown()
 		throws Exception {
-		// Add additional tear down code here
+		
 	}
 
 	/**

@@ -9,19 +9,36 @@ import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 
+// TODO: Auto-generated Javadoc
+/**
+ * The Class TestMain.
+ */
 public class TestMain {
 	
+	/**
+	 * Sets the up.
+	 *
+	 * @throws Exception the exception
+	 */
 	@Before
 	public void setUp() throws Exception {
 		
 		
 	}
 
+	/**
+	 * Tear down.
+	 *
+	 * @throws Exception the exception
+	 */
 	@After
 	public void tearDown() throws Exception {
 		
 	}
 
+	/**
+	 * Adds the recipe 1.
+	 */
 	@Test
 	public void addRecipe1() {
 		 
@@ -44,20 +61,12 @@ public class TestMain {
 		Main.scan=new Scanner(s);
 		Main.mainMenu();
 		assertTrue(Main.coffeeMaker.getRecipeForName("Coffee").getName().equals("Coffee"));
-		//	assertTrue(true);
 		
-		/*
-		Main.scan=new Scanner(s);
-		try{
-			Main.mainMenu();
-			assertTrue(true);
-		}
-		catch(Exception e){
-			assertTrue(false);
-		}
-		*/
 	}
 
+	/**
+	 * Delete recipe 1.
+	 */
 	@Test
 	public void deleteRecipe1() {
 		addRecipe1();
@@ -75,6 +84,9 @@ public class TestMain {
 		assertTrue(Main.coffeeMaker.getRecipeForName("Coffee").getAmtMilk()==0);
 	}
 
+	/**
+	 * Edits the recipe 1.
+	 */
 	@Test
 	public void editRecipe1() {
 		addRecipe1();
@@ -98,6 +110,9 @@ public class TestMain {
 		
 	}
 
+	/**
+	 * Purchase beverage 1.
+	 */
 	@Test
 	public void purchaseBeverage1() {
 		addRecipe1();
@@ -121,6 +136,10 @@ public class TestMain {
 		assertFalse(Main.coffeeMaker.checkInventory().getMilk()==milk);
 
 	}
+	
+	/**
+	 * Purchase beverage 2.
+	 */
 	@Test
 	public void purchaseBeverage2() {
 		addRecipe1();
@@ -144,6 +163,9 @@ public class TestMain {
 		assertTrue(Main.coffeeMaker.checkInventory().getMilk()==milk);
 	}
 
+	/**
+	 * Check inventory.
+	 */
 	@Test
 	public void checkInventory() {
 		CoffeeMaker Coffee=new CoffeeMaker();
@@ -166,6 +188,9 @@ public class TestMain {
 		assertTrue(Main.coffeeMaker.checkInventory().getChocolate()==22);
 	}
 
+	/**
+	 * Adds the inventory 1.
+	 */
 	@Test
 	public void addInventory1() {
 		CoffeeMaker Coffee=new CoffeeMaker();

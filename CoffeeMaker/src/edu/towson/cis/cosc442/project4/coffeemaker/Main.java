@@ -5,14 +5,24 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.Scanner;
 
+// TODO: Auto-generated Javadoc
 /**
- * Starts the console UI for the CoffeeMaker
+ * Starts the console UI for the CoffeeMaker.
+ *
  * @author Josh
  * @version $Revision: 1.0 $
  */
 public class Main {
+    
+    /** The coffee maker. */
     protected static CoffeeMaker coffeeMaker;
+    
+    /** The scan. */
     protected static Scanner scan;
+    
+    /**
+     * Main menu.
+     */
     public static void mainMenu() {
         System.out.println("1. Add a recipe");
         System.out.println("2. Delete a recipe");
@@ -34,6 +44,10 @@ public class Main {
         if(userInput == 6) makeCoffee();
         if(userInput == 0) System.exit(0);
     }
+	
+	/**
+	 * Adds the recipe.
+	 */
 	public static void addRecipe() {
 	    //Read in recipe name
 		System.out.println();
@@ -97,6 +111,9 @@ public class Main {
 	    mainMenu();
     }
     
+    /**
+     * Delete recipe.
+     */
     public static void deleteRecipe() {
         final Recipe [] recipes = coffeeMaker.getRecipes();
         for(int i = 0; i < recipes.length; i++) {
@@ -116,6 +133,9 @@ public class Main {
         mainMenu();
     }
     
+    /**
+     * Edits the recipe.
+     */
     public static void editRecipe() {
          Recipe [] recipes = coffeeMaker.getRecipes();
         for(int i = 0; i < recipes.length; i++) {
@@ -189,6 +209,9 @@ public class Main {
         mainMenu();
     }
     
+    /**
+     * Adds the inventory.
+     */
     public static void addInventory() {
 	    //Read in amt coffee
     	System.out.println();
@@ -226,12 +249,18 @@ public class Main {
         mainMenu();
     }
     
+    /**
+     * Check inventory.
+     */
     public static void checkInventory() {
        final Inventory inventory = coffeeMaker.checkInventory();
         System.out.println(inventory.toString());
         mainMenu();
     }
     
+    /**
+     * Make coffee.
+     */
     public static void makeCoffee() {
         Recipe [] recipes = coffeeMaker.getRecipes();
         for(int i = 0; i < recipes.length; i++) {

@@ -4,14 +4,24 @@ import org.junit.Test;
 
 import junit.framework.TestCase;
 
+// TODO: Auto-generated Javadoc
 /**
- *
+ * The Class CoffeeMakerTest.
  */
 public class CoffeeMakerTest extends TestCase {
+	
+	/** The cm. */
 	private CoffeeMaker cm;
+	
+	/** The i. */
 	private Inventory i;
+	
+	/** The r 1. */
 	private Recipe r1;
 
+	/* (non-Javadoc)
+	 * @see junit.framework.TestCase#setUp()
+	 */
 	public void setUp() {
 		cm = new CoffeeMaker();
 		i = cm.checkInventory();
@@ -24,10 +34,18 @@ public class CoffeeMakerTest extends TestCase {
 		r1.setAmtSugar(1);
 		r1.setAmtChocolate(0);
 	}
+	
+	/**
+	 * Test add recipe 1.
+	 */
 	@Test
 	public void testAddRecipe1() {
 		assertTrue(cm.addRecipe(r1));
 	}
+	
+	/**
+	 * Testaddinventory.
+	 */
 	@Test
 	public void testaddinventory() {
 		cm = new CoffeeMaker();
@@ -39,6 +57,9 @@ public class CoffeeMakerTest extends TestCase {
 		
 	}
 	
+	/**
+	 * Testaddinventory 1.
+	 */
 	@Test
 	public void testaddinventory1() {
 		int milk=cm.checkInventory().getMilk();
@@ -51,6 +72,10 @@ public class CoffeeMakerTest extends TestCase {
 		assertFalse(cm.checkInventory().getSugar()==sugar);
 		assertFalse(cm.checkInventory().getMilk()==milk);
 	}
+	
+	/**
+	 * Testdoesrecipeexist 1.
+	 */
 	@Test
 	public void testdoesrecipeexist1() {
 		Recipe r51=new Recipe();
@@ -63,6 +88,10 @@ public class CoffeeMakerTest extends TestCase {
 		System.out.println(cm.doesrecipeexist(r51));
 		assertFalse(cm.doesrecipeexist(r51));
 	}
+	
+	/**
+	 * Testdoesrecipeexist.
+	 */
 	@Test
 	public void testdoesrecipeexist() {
 		Recipe r51=new Recipe();
@@ -74,6 +103,10 @@ public class CoffeeMakerTest extends TestCase {
 		System.out.println(cm.doesrecipeexist(r57));
 		assertTrue(cm.doesrecipeexist(r57));
 	}
+	
+	/**
+	 * Test add recipe 3.
+	 */
 	@Test
 	public void testAddRecipe3() {
 		Recipe r54=new Recipe();
@@ -94,6 +127,10 @@ public class CoffeeMakerTest extends TestCase {
 		assertFalse(cm.addRecipe(r57));
 		
 	}
+	
+	/**
+	 * Test add recipe 4.
+	 */
 	public void testAddRecipe4() {
 		Recipe r54=new Recipe();
 		r54.setName("RtfA");
@@ -113,42 +150,19 @@ public class CoffeeMakerTest extends TestCase {
 		
 	}
 	
+	/**
+	 * Test delete recipe 1.
+	 */
 	@Test
 	public void testDeleteRecipe1() {
 		cm.addRecipe(r1);
 		assertTrue(cm.deleteRecipe(r1));
 	}
-	/*public void testexist(){
-		CoffeeMaker cm=new CoffeeMaker();
-		Recipe r=new Recipe();
-		r.setName("Zilch");
-		r.setPrice(8);
-		r.setAmtCoffee(5);
-		r.setAmtSugar(2);
-		r.setAmtChocolate(9);
-		r.setAmtMilk(5);
-		
-		assertFalse(cm.doesrecipeexist(r));
-		
-	}
-	*/
-/*	public void testexist1(){
-		CoffeeMaker cm=new CoffeeMaker();
-		
-		Recipe r=new Recipe();
-		
-		r.setName("Zilch");
-		r.setPrice(8);
-		r.setAmtCoffee(5);
-		r.setAmtSugar(2);
-		r.setAmtChocolate(9);
-		r.setAmtMilk(5);
-		
-		cm.addRecipe(r);
-		assertTrue(cm.doesrecipeexist(r));
-	}
 	
-	*/
+	/**
+	 * Test edit recipe 1.
+	 */
+	
 	@Test
 	public void testEditRecipe1() {
 		cm.addRecipe(r1);
@@ -157,18 +171,30 @@ public class CoffeeMakerTest extends TestCase {
 		newRecipe.setAmtSugar(2);
 		assertTrue(cm.editRecipe(r1, newRecipe));
 	}
+	
+	/**
+	 * Test make coffee.
+	 */
 	@Test
 	public void testMakeCoffee() {
 		assertTrue(cm.makeCoffee(r1, r1.getPrice()-1)==r1.getPrice()-1);
 		
 		
 	}
+	
+	/**
+	 * Test make coffee 1.
+	 */
 	@Test
 	public void testMakeCoffee1() {
 		cm.checkInventory().setCoffee(5);
 		assertTrue(cm.makeCoffee(r1, r1.getPrice()+5)==r1.getPrice()+5);
 		
 	}
+	
+	/**
+	 * Test make coffee 7.
+	 */
 	@Test
 	public void testMakeCoffee7() {
 		r1.setAmtChocolate(4);
